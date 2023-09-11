@@ -1,0 +1,37 @@
+1. Next step: 
+    ALL: setup local env
+	Yuangen: Create fake website (cloud)
+	Yunfei: email parsing to template, flow --> send email
+	Lumin: server backend (store configuration: id, role+email, remote call url for information, remote call url for approve/reject)
+
+
+2. Design:
+		//read email:
+		--input email ; get template
+		-- input email+template , get remote url
+		-- input url, get information
+		
+		--- show to user
+		
+		//call remote url to get information and show to user
+		
+		-- input user's action + [template + flow], get remote url (local storage cridential) and params
+		--- call remote url , show result to user
+		//user take action to remote url
+		--- input flow , send email to ...
+		
+		###FLOW1,external flow control: ESF/Servicenow/  ===> simulate
+		
+		FLOW2,internal flow: send email			===> add in server
+		
+		DEV:  lead approve 1==> check out
+
+		UAT: lead approve 1
+			 qa approve 2 ==> check out ==> qa test
+
+		PROD: lead approve 1
+			  qa approve 2
+			  business approve 3 ==> developer check out ==> business check out
+			  
+			  
+		  addin client
